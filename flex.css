@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+    background-color: #ff2336;
+    background-image: linear-gradient(to bottom right, #ff4912, #ff1b72);
+    font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+.box {
+    margin: 7rem 5rem;
+    flex-direction: column;
+}
+
+.box > * {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    line-height: 50px;
+}
+
+.row > * {
+    flex-grow: 1;
+    margin: 3px;
+}
+
+.month, .week {
+    background-color: rgba(0, 0, 0, 0.397);
+    margin: 0;
+}
+
+.day {
+    background-color: rgba(255, 255, 255, 0.116);
+}
+
+.empty {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+}
