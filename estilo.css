@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcfc;
+  }
+  
+  header {
+    background-color: #72d5d5;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  main {
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #055e70;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position:static;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Estilos para el botón del Call Center */
+.call-center-button {
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de tipo mano al pasar el ratón */
+}
+
+.call-center-button:hover {
+  background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}
+#chat-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#chat-box {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  overflow: hidden;
+}
+
+#chat-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+#chat-close-button {
+  float: right;
+  cursor: pointer;
+}
+
+#chat-body {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#chat-container.show {
+  animation: slideIn 0.5s ease;
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+#chat-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+#user-message {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+#send-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
