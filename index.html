@@ -1,70 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario</title>
-    <link rel="stylesheet" href="flex.css">
+  <meta charset="UTF-8">
+  <title>CALL CENTER</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const chatContainer = document.getElementById("chat-container");
+  const chatCloseButton = document.getElementById("chat-close-button");
+  const userMessage = document.getElementById("user-message");
+  const sendButton = document.getElementById("send-button");
+  const chatBody = document.getElementById("chat-body");
+
+  // Mostrar el chat al cargar la página
+  chatContainer.classList.add("show");
+
+  // Ocultar el chat al hacer clic en el botón de cierre
+  chatCloseButton.addEventListener("click", function () {
+    chatContainer.style.display = "none";
+  });
+
+  // Agregar evento al botón de envío
+  sendButton.addEventListener("click", function () {
+    const message = userMessage.value;
+    if (message.trim() !== "") {
+      chatBody.innerHTML += `<div class="user-message">${message}</div>`;
+      userMessage.value = "";
+    }
+  });
+});
+
+  </script>
 </head>
 <body>
-    <!-- Contenedor padre -->
-    <div class="box">
-        <!-- Items hijos -->
-        <div class="month">Junio</div>
-        <div class="row">
-            <div class="week">D</div>
-            <div class="week">L</div>
-            <div class="week">M</div>
-            <div class="week">M</div>
-            <div class="week">J</div>
-            <div class="week">V</div>
-            <div class="week">S</div>
-            </div>
-        <div class="row">
-            <div class="empty">00</div>
-            <div class="empty">00</div>
-            <div class="empty">00</div>
-            <div class="empty">00</div>
-            <div class="day">01</div>
-            <div class="day">02</div>
-            <div class="day">03</div>
-        </div>
-        <div class="row">
-            <div class="day">04</div>
-            <div class="day">05</div>
-            <div class="day">06</div>
-            <div class="day">07</div>
-            <div class="day">08</div>
-            <div class="day">09</div>
-            <div class="day">10</div>
-        </div>
-        <div class="row">
-            <div class="day">11</div>
-            <div class="day">12</div>
-            <div class="day">13</div>
-            <div class="day">14</div>
-            <div class="day">15</div>
-            <div class="day">16</div>
-            <div class="day">17</div>
-        </div>
-        <div class="row">
-            <div class="day">18</div>
-            <div class="day">19</div>
-            <div class="day">20</div>
-            <div class="day">21</div>
-            <div class="day">22</div>
-            <div class="day">23</div>
-            <div class="day">24</div>
-        </div>
-        <div class="row">
-            <div class="day">25</div>
-            <div class="day">26</div>
-            <div class="day">27</div>
-            <div class="day">28</div>
-            <div class="day">29</div>
-            <div class="day">30</div>
-            <div class="empty">00</div>
-        </div>
+    <center>
+  <header>
+    <h1>CALL CENTER</h1>
+  </header>
+  <main>
+    <section class="tipo-dispositivo">
+      <h2>Teléfonos inteligentes</h2>
+      <ul>
+        <li><a href="celulares.html">Samsung</a></li>
+        <img src="IMG/celular.avif" width="100" height="100" />
+      </ul>
+    </section>
+    <section class="tipo-dispositivo">
+      <h2>Tabletas</h2>
+      <ul>
+        <li><a href="tables.html">iPad</a></li>
+        <img src="IMG/tablet.jpeg" width="100" height="100" />
+      </ul>
+    </section>
+    <section  class="tipo-dispositivo">
+      <h2>Smartwatches</h2>
+      <ul>
+        <li><a href="Smartwatches.html">Apple Watch</a></li>
+        <img src="IMG/smart.webp" width="100" height="100" />
+      </ul>
+    </section>
+    <section class="tipo-dispositivo">
+      <h2>Otros dispositivos</h2>
+      <ul>
+        <li><a href="Otros dispositivos.html">eReaders</a></li>
+        <img src="IMG/eReaders.jpeg" width="100" height="100" />
+      </ul>
+    </section>
+  </main>
+  <div id="chat-container">
+    <div id="chat-box">
+      <div id="chat-header">
+        Chat de Sugerencias
+        <span id="chat-close-button">X</span>
+      </div>
+      <div id="chat-body">
+        ¡Hola! ¿En qué puedo ayudarte?
+      </div>
+      <div id="chat-input">
+        <textarea id="user-message" placeholder="Escribe tu comentario"></textarea>
+        <button id="send-button">Enviar</button>
+      </div>
     </div>
+  </div>  
+  
+  <footer>
+    <p>Todos Los derechos reservados Copyright &copy; 2023</p>
+  </footer>
 </body>
 </html>
